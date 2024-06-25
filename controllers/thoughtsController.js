@@ -13,7 +13,7 @@ const thoughtsController = {
     }
   },
   // Get a thought
-  async thoughtById(req, res) {
+  async thoughtsById(req, res) {
     try {
       const thoughts = await Thoughts.findOne({ _id: req.params.thoughtsId })
       .populate('thoughts');
@@ -87,7 +87,7 @@ const thoughtsController = {
     }
   },
 // Delete a reaction
-  async createThoughts(req, res) {
+  async deleteReactions(req, res) {
     try {
       const thoughts = await Thoughts.findOneAndUpdate(
         { _id: req.params.thoughtsId},
